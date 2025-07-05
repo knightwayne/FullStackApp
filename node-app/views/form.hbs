@@ -1,0 +1,64 @@
+<h1>Form MongoDB Get Post</h1>
+
+<div style="width: 100%;" id="formDiv">
+  <div
+    style="width: 50%; height: 200px; float: left; background: rgb(249, 241, 205);"
+>
+    <form action="/form/submit" method="post">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" />
+      <br />
+      <br />
+      <label for="id">Id: </label>
+      <input type="number" name="id" id="id" />
+      <br />
+      <br />
+      <button type="submit">Submit Id</button>
+    </form>
+  </div>
+  <div style="margin-left: 50%; height: 200px; background: rgb(210, 210, 235);">
+    <form action="/form/submit" method="get">
+      <button type="submit">Get Posts</button>
+    </form>
+    {{#if condition}}
+      <h3>We have a list!</h3>
+      <ul>
+        {{#each users}}
+          <li>{{id}}: &nbsp; {{name}}</li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <h3>Nothing fetched till now!</h3>
+    {{/if}}
+  </div>
+  <hr><hr>
+  <div>
+    <div
+      style="width: 50%; height: 200px; float: left; background: rgb(210, 210, 235);"
+    >
+        <form action="/form/update" method="post">
+            <label for="id">Id: </label>
+            <input type="number" name="id" id="id" />
+            <br />
+            <br />
+            <label for="name">New Name: </label>
+            <input type="text" name="name" id="name" />
+            <br />
+            <br />
+            <button type="submit">Update Post</button>
+      </form>
+    </div>
+
+   <div style="margin-left: 50%; height: 200px; background: rgb(249, 241, 205);">
+      <form action="/form/delete" method="post">
+        <label for="id">Id: </label>
+        <input type="text" name="id" id="id" />
+        <br />
+        <br />
+        <button type="submit">Delete Post</button>
+    </form>
+    </div>
+
+  </div>
+
+</div>

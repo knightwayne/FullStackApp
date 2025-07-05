@@ -1,0 +1,15 @@
+<h2>Routed to Home Page</h2>
+
+<h3>
+    {{#if bool}}
+    <h4>Bool condition is true</h4>
+    {{else}}
+    <h4>Bool condition is not true</h4>
+    {{/if}}
+</h3>
+
+<h3>
+    {{#each arr as |val key|}}
+        {{key}}: {{val}}
+    {{/each}}
+</h3>
